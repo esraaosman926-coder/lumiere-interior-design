@@ -1,0 +1,1392 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F1EA;
+    color: #25231F;
+}
+
+
+/* =========================
+   2. NAVIGATION BAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(37, 35, 31, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 7%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D8C8B2;
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+
+.hero {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    color: #FFFFFF;
+}
+
+.hero-content p:first-child {
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-content a {
+    display: inline-block;
+    padding: 15px 35px;
+
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.hero-content a:hover {
+    background-color: #FFFFFF;
+    color: #25231F;
+}
+
+
+/* =========================
+   4. FOOTER
+========================= */
+
+footer {
+    background-color: #25231F;
+    color: #F5F1EA;
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   5. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 100px 8%;
+    background-color: #F5F1EA;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.section-subtitle {
+    color: #A58B68;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+
+    background-color: #25231F;
+    color: white;
+
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #A58B68;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .about {
+        flex-direction: column;
+        gap: 35px;
+        padding: 60px 7%;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 35px;
+    }
+
+}
+
+/* =========================
+   OUR SERVICES SECTION
+========================= */
+
+.services {
+    padding: 100px 8%;
+    background-color: #FFFFFF;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.services-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.services-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.services-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #F5F1EA;
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #00000015;
+}
+
+.service-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-info {
+    padding: 28px;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.service-info p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.service-info a {
+    color: #A58B68;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-info a:hover {
+    color: #25231F;
+}
+
+
+/* SERVICES RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-heading h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* Featured Projects Section */
+
+.featured-projects {
+    padding: 100px 8%;
+    background-color: #F5F1EA;
+}
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.projects-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.projects-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.project-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.project-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #A58B68;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.projects-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.projects-button a {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #25231F;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.projects-button a:hover {
+    background-color: #A58B68;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-heading h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* Testimonials Section */
+
+.testimonials {
+    padding: 100px 8%;
+    background-color: #FFFFFF;
+}
+
+.testimonials-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.testimonials-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.testimonials-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #F5F1EA;
+    padding: 35px;
+    text-align: center;
+    border-bottom: 3px solid #A58B68;
+}
+
+.quote {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.testimonial-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.testimonial-card span {
+    color: #A58B68;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* Contact CTA Section */
+
+.contact-cta {
+    padding: 90px 20px;
+    background-color: #25231F;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.contact-cta > p:first-child {
+    color: #D8C8B2;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.contact-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-cta > p:nth-of-type(2) {
+    color: #CCC;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.contact-cta a {
+    display: inline-block;
+    padding: 14px 35px;
+    border: 1px solid #D8C8B2;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.contact-cta a:hover {
+    background-color: #D8C8B2;
+    color: #25231F;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-heading h2,
+    .contact-cta h2 {
+        font-size: 35px;
+    }
+
+}
+
+/* Projects Hero Section */
+
+.projects-hero {
+    min-height: 65vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 150px 20px 60px;
+    color: #FFFFFF;
+}
+
+.projects-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.projects-hero p {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+
+    .projects-hero h1 {
+        font-size: 45px;
+    }
+
+}
+
+/* Project Gallery Section */
+
+.project-gallery {
+    padding: 100px 8%;
+    background-color: #F5F1EA;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.gallery-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.gallery-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.gallery-item {
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    padding: 22px;
+    text-align: center;
+}
+
+.gallery-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.gallery-item figcaption p {
+    color: #A58B68;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* Responsive Gallery */
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-heading h2 {
+        font-size: 35px;
+    }
+
+}
+
+/* Video Section */
+
+.video-section {
+    padding: 100px 8%;
+    background-color: #FFFFFF;
+}
+
+.video-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.video-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.video-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px #00000020;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .video-heading h2 {
+        font-size: 35px;
+    }
+
+}
+
+/* Services Hero */
+
+.services-hero {
+    min-height: 65vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 150px 20px 60px;
+    color: #FFFFFF;
+}
+
+.services-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.services-hero p {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* Services Details */
+
+.services-details {
+    padding: 100px 8%;
+    background-color: #F5F1EA;
+}
+
+.services-details-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-details-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.services-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.detail-card {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-bottom: 3px solid #A58B68;
+}
+
+.detail-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.detail-card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.detail-card ul {
+    padding-left: 20px;
+    color: #A58B68;
+    font-size: 13px;
+    line-height: 2.2;
+}
+
+
+/* Pricing Table */
+
+.pricing-section {
+    padding: 100px 8%;
+    background-color: #FFFFFF;
+}
+
+.pricing-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.pricing-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.pricing-heading > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 20px;
+    border: 1px solid #D8C8B2;
+}
+
+th {
+    background-color: #25231F;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+td {
+    color: #555;
+    font-size: 13px;
+}
+
+tr:hover td {
+    background-color: #F5F1EA;
+}
+
+.table-note {
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* Responsive Services Page */
+
+@media (max-width: 900px) {
+
+    .services-details-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .services-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-hero h1 {
+        font-size: 45px;
+    }
+
+    .pricing-heading h2 {
+        font-size: 35px;
+    }
+
+}
+
+/* Contact Hero */
+
+.contact-hero {
+    min-height: 65vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 150px 20px 60px;
+    color: #FFFFFF;
+}
+
+.contact-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.contact-hero p {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* Contact Section */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 70px;
+    padding: 100px 8%;
+    background-color: #F5F1EA;
+}
+
+.contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.contact-info > p:not(.section-subtitle) {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.contact-detail {
+    margin-bottom: 25px;
+}
+
+.contact-detail h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.contact-detail p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Contact Form */
+
+.contact-form-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group > label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #25231F;
+}
+
+.form-group input:not([type="radio"]):not([type="checkbox"]),
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #D8C8B2;
+    background-color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #A58B68;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-size: 12px;
+    color: #777;
+}
+
+.form-group button,
+.contact-form-container button {
+    width: 100%;
+    padding: 16px;
+    background-color: #25231F;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.contact-form-container button:hover {
+    background-color: #A58B68;
+}
+
+
+/* Responsive Contact Page */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 45px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+}
+
+/* =====================================
+   DESIGN CATEGORY PAGES
+===================================== */
+
+/* Gallery Grid */
+.project-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* Design Cards */
+.project-gallery .gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery .gallery-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Design Images */
+.project-gallery .gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Design Information */
+.project-gallery .gallery-item figcaption {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-gallery .gallery-item figcaption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: #25231f;
+    margin-bottom: 10px;
+}
+
+.project-gallery .gallery-item figcaption p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #8b7355;
+    font-weight: 500;
+}
+
+/* Star Rating */
+.design-rating {
+    color: #c49a50;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 8px 0;
+}
+
+/* Video Section */
+.video-section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.video-heading {
+    margin-bottom: 35px;
+}
+
+.video-container {
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 480px;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Request Design Section */
+.contact-cta {
+    background-color: #e9e1d5;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #25231f;
+    margin-bottom: 15px;
+}
+
+.contact-cta p {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    color: #62594e;
+}
+
+.contact-cta a {
+    display: inline-block;
+    background-color: #25231f;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+.contact-cta a:hover {
+    background-color: #8b7355;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .project-gallery .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-gallery .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .project-gallery .gallery-item img {
+        height: 250px;
+    }
+
+    .contact-cta h2 {
+        font-size: 25px;
+    }
+
+    .video-section {
+        padding: 45px 15px;
+    }
+}
+
+/* =================================
+   IMAGE LIGHTBOX
+================================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    color: #c49a50;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 80vh;
+    }
+
+    .close-lightbox {
+        top: 10px;
+        right: 20px;
+        font-size: 38px;
+    }
+}
+
+/* Show Full Videos Without Cropping */
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    overflow: visible;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    display: block;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+
+/* =====================================
+   FINAL VIDEO DISPLAY FIX
+   Keeps the complete video visible without cropping
+===================================== */
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    overflow: visible;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    display: block;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+/* Makes clickable gallery images clear to visitors */
+.project-gallery .gallery-item img {
+    cursor: pointer;
+}
+
+/* Keep the lightbox image fully visible on every screen size */
+.lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .lightbox img {
+        max-width: 96vw;
+        max-height: 80vh;
+    }
+}
+/* Bootstrap Carousel Styling */
+#projectsCarousel {
+    max-width: 850px;
+    margin: auto;
+}
+
+#projectsCarousel .carousel-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    #projectsCarousel .carousel-item img {
+        height: 220px;
+    }
+}
